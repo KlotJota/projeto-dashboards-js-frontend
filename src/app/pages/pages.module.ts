@@ -5,6 +5,7 @@ import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { DefaultdModule } from './default/default.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   imports: [
@@ -12,7 +13,7 @@ import { DefaultdModule } from './default/default.module';
     ThemeModule,
     NbMenuModule,
     DefaultdModule,
-
+    UserModule,
   ],
   declarations: [
     PagesComponent,
