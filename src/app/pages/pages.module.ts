@@ -6,6 +6,7 @@ import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { DefaultdModule } from './default/default.module';
 import { UserModule } from './user/user.module';
+import { TaskModule } from './task/task.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { UserModule } from './user/user.module';
     NbMenuModule,
     DefaultdModule,
     UserModule,
+    TaskModule,
   ],
   declarations: [
     PagesComponent,

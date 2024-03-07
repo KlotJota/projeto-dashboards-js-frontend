@@ -116,10 +116,10 @@ export class UserComponent implements OnInit {
   }
 
   private findFormAdd() {
-    const usuario = this.formUser.value;
-    delete usuario._id; // remove o id do usuario no processo de envio, nao precisamos desse dado
+    const user = this.formUser.value;
+    delete user._id; // remove o id do user no processo de envio, nao precisamos desse dado
 
-    return usuario;
+    return user;
   }
 
   private editUser() {
