@@ -21,7 +21,7 @@ export class Task {
     constructor(task: Task) {
       this._id = task._id;
       this.description = task.description;
-      this.responsibleName = task.responsibleName;
+      this.responsibleName = task.responsible.name;
 
       if (StatusEnum.OPEN === task.status) this.statusTranslate = 'Em aberto';
       else this.statusTranslate = 'Finalizado';

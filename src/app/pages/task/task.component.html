@@ -23,7 +23,7 @@
 
           <div class="form-group">
             <label for="status">Status *</label>
-            <nb-select class="w=100" formControlName="status">
+            <nb-select class="w-100" formControlName="status">
               <nb-option *ngFor="let status of optionsStatus" [value]="status.value">
                 {{ status.name }}
               </nb-option>
@@ -37,7 +37,7 @@
 
           <div class="form-group">
             <label for="responsible">Responsável *</label>
-            <nb-select class="w=100" formControlName="responsible">
+            <nb-select class="w-100" formControlName="responsible">
               <nb-option *ngFor="let responsible of optionsResponsible" [value]="responsible._id">
                 {{ responsible.name }}
               </nb-option>

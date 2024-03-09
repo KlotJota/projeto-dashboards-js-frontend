@@ -83,7 +83,7 @@ export class TaskComponent implements OnInit {
       delete: {
         deleteButtonContent: '<span class="nb-trash"  title="Excluir"></span>',
       },
-      noDataMessage: 'Nenhum tarefa cadastrado.',
+      noDataMessage: 'Nenhuma tarefa cadastrado.',
       columns: {
         statusTranslate: {
           title: 'Status',
