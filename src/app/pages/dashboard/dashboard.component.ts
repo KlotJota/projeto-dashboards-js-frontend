@@ -40,36 +40,50 @@ export class DashboardComponent {
   private setOptionMyTask(tasks: Task[], idUserLogged: string): void {
     this.optionMyTasks = {
       title: {
-        text: 'Minhas tarefas',
-        left: 15,
+        text: 'Total de tarefas',
+        left: 'center',
+        textStyle: {
+          color: 'rgba(255, 255, 255, 0.3)',
+        },
       },
+
       tooltip: {
         trigger: 'item',
       },
-      legend: {
-        bottom: 20,
-        left: 'center',
+
+      visualMap: {
+        show: false,
+        min: 80,
+        max: 600,
       },
       series: [
         {
+          name: 'Tarefa',
           type: 'pie',
-          radius: ['40%', '70%'],
-          avoidLabelOverlap: false,
+          radius: '55%',
+          center: ['50%', '50%'],
+          data: this.getDataOptionMyTask(tasks, idUserLogged),
+          roseType: 'radius',
           label: {
-            show: false,
-            position: 'center',
-          },
-          emphasis: {
-            label: {
-              show: true,
-              fontSize: '20',
-              fontWeight: 'bold',
-            },
+            color: 'rgba(255, 255, 255, 0.3)',
           },
           labelLine: {
-            show: false,
+            lineStyle: {
+              color: 'rgba(255, 255, 255, 0.3)',
+            },
+            smooth: 0.2,
+            length: 10,
+            length2: 20,
           },
-          data: this.getDataOptionMyTask(tasks, idUserLogged),
+          itemStyle: {
+            shadowBlur: 200,
+          },
+
+          animationType: 'scale',
+          animationEasing: 'elasticOut',
+          animationDelay(idx) {
+            return Math.random() * 200;
+          },
         },
       ],
     };
@@ -80,8 +94,8 @@ export class DashboardComponent {
     const finished = tasks.filter((task) => (task.status === StatusEnum.FINISHED && task.responsible._id === idUserLogged)).length;
 
     return [
-      { value: opened, name: 'Em Aberto', itemStyle: { color: '#f1c40f' } },
-      { value: finished, name: 'Finalizadas', itemStyle: { color: '#2ecc71' } },
+      { value: opened, name: 'Em Aberto', itemStyle: { color: '#6220db' } },
+      { value: finished, name: 'Finalizadas', itemStyle: { color: '#14974b' } },
     ];
   }
 
@@ -89,6 +103,10 @@ export class DashboardComponent {
     this.optionTaskResponsible = {
       title: {
         text: 'Tarefas por responsável',
+        left: 'center',
+        textStyle: {
+          color: 'rgba(255, 255, 255, 0.3)',
+        },
       },
       tooltip: {
         trigger: 'axis',
@@ -100,6 +118,9 @@ export class DashboardComponent {
         data: ['Em Aberto', 'Finalizadas'],
         bottom: 20,
         left: 'center',
+        textStyle: {
+          color: 'rgba(255, 255, 255, 0.3)',
+        },
       },
       grid: {
         bottom: '15%',
@@ -134,13 +155,13 @@ export class DashboardComponent {
         name: 'Em Aberto',
         type: 'bar',
         data: dataOpened,
-        color: '#f1c40f',
+        color: '#6220db',
       },
       {
         name: 'Finalizadas',
         type: 'bar',
         data: dataFinished,
-        color: '#2ecc71',
+        color: '#14974b',
       },
     ];
   }

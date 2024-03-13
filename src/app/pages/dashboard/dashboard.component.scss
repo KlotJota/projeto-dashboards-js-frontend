@@ -12,17 +12,17 @@
   nb-card {
     flex-direction: row;
     align-items: center;
-    height: 8.5rem;
+    height: 9.5rem;
     overflow: visible;
 
-
-
     .title {      
-      font-size: 1rem;     
+      font-size: 1rem;
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
 
     .total {
-      font-size: 1.3rem;              
+      font-size: 1.5rem;              
     }
 
     .icon-container {
@@ -45,25 +45,28 @@
         font-size: 1.1rem;
       }
       cursor: pointer;
+      .icon{
+        width: 8.75rem;
+      }
     }&.off {    
 
       .icon {
         color: white;
 
         &.blue {
-          background-color: #3498db;
+          background-color: #0f5e92;
         }
 
         &.yellow {
-          background-color: #f1c40f;
+          background-color: #6220db;
         }
 
         &.green {
-          background-color: #2ecc71;
+          background-color: #14974b;
         }
 
         &.gray {
-          background-color: #bdc3c7;
+          background-color:rgba(255, 255, 255, 0.3),
         }
         
       }     
