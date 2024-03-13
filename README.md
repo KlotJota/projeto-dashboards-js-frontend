@@ -1,7 +1,7 @@
 # projeto-dashboards-js-frontend
 Módulo front-end do projeto de dashboards feito em JS
 
-Esse repositório se trata do módulo front-end do projeto "Dashboards em JavaScript", desenvolvido em angular e TypeScript.
+Nesse módulo, foi feita a construção do back-end do projeto "Dashboards em JavaScript", utilizando principalmente TypeScript e Angular, para o front-end
 
 Nesse módulo, foram utilizadas algumas bibliotecas para a melhor ilustração visual da organização de tarefas fornecidas pelo projeto, tais como Apache ECharts, onde através dela foi possível implementar dashboards e gráficos.
 
